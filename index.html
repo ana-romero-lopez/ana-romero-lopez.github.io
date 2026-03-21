@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ana Romero | Social Media Manager & Data-Driven Strategist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1c2f4e;
+      --navy-light: #243d63;
+      --navy-pale: #edf1f7;
+      --black: #111111;
+      --dark: #2e2e2e;
+      --mid: #555555;
+      --light: #888888;
+      --border: #e4e0d8;
+      --cream: #faf7f1;
+      --cream-dark: #f2ede3;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 6%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--light);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--navy); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 6%;
+      padding-top: 80px;
+      max-width: 980px;
+      background: var(--white);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: var(--navy-pale);
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.8rem;
+      width: fit-content;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6.5vw, 5.5rem);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: var(--light);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--mid);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.8rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-num {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-stat-label {
+      font-size: 0.73rem;
+      color: var(--light);
+      letter-spacing: 0.03em;
+    }
+
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.9rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--navy-light); }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1.5px solid var(--border);
+      color: var(--dark);
+      padding: 0.9rem 2.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--navy); color: var(--navy); }
+
+    /* ── SECTION WRAPPER ── */
+    .section-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 6rem 6%;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-divider {
+      width: 36px;
+      height: 3px;
+      background: var(--navy);
+      margin-bottom: 3rem;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--mid);
+      margin-bottom: 1.3rem;
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+
+    .about-text p strong { color: var(--black); font-weight: 600; }
+
+    .about-strengths { margin-top: 2rem; }
+
+    .strength-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+      padding: 1rem 1.2rem;
+      background: var(--white);
+      border-radius: 8px;
+      border-left: 3px solid var(--navy);
+    }
+
+    .strength-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--navy);
+      background: var(--navy-pale);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      min-width: 28px;
+      text-align: center;
+      margin-top: 0.15rem;
+      flex-shrink: 0;
+    }
+
+    .strength-text strong {
+      font-size: 0.88rem;
+      color: var(--black);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .strength-text span { font-size: 0.79rem; color: var(--light); }
+
+    .about-facts { display: flex; flex-direction: column; gap: 0.9rem; }
+
+    .fact-item {
+      padding: 1.1rem 1.3rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .fact-label {
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 0.3rem;
+    }
+
+    .fact-value { font-size: 0.9rem; font-weight: 500; color: var(--black); }
+
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--white); }
+
+    .exp-list { display: flex; flex-direction: column; }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 155px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:last-child { border-bottom: none; }
+
+    .exp-date { font-size: 0.76rem; color: var(--light); font-weight: 500; padding-top: 0.2rem; line-height: 1.6; }
+
+    .exp-company {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-role { font-size: 1.02rem; font-weight: 600; color: var(--black); margin-bottom: 0.8rem; }
+
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      font-size: 0.87rem;
+      color: var(--mid);
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+      line-height: 1.65;
+    }
+    .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--navy); font-weight: 600; }
+    .exp-bullets li strong { color: var(--dark); }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--cream); }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .skill-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .skill-card:hover { box-shadow: 0 6px 24px rgba(28,47,78,0.09); transform: translateY(-2px); }
+
+    .skill-icon { font-size: 1.45rem; margin-bottom: 0.7rem; }
+
+    .skill-name { font-weight: 700; font-size: 0.87rem; color: var(--black); margin-bottom: 0.6rem; }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+    .skill-tag {
+      font-size: 0.69rem;
+      background: var(--navy-pale);
+      color: var(--navy);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    /* ── CASE STUDIES ── */
+    #case-studies { background: var(--white); }
+
+    .case-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .case-item {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.2rem;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 1.8rem;
+      align-items: start;
+      transition: box-shadow 0.2s;
+    }
+    .case-item:hover { box-shadow: 0 6px 28px rgba(28,47,78,0.07); }
+
+    .case-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: var(--border);
+      line-height: 1;
+      padding-top: 0.2rem;
+    }
+
+    .case-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .case-role { font-size: 0.71rem; color: var(--light); font-weight: 500; margin-bottom: 0.4rem; }
+
+    .case-title { font-weight: 700; font-size: 1.08rem; color: var(--black); margin-bottom: 0.6rem; line-height: 1.4; }
+
+    .case-desc { font-size: 0.87rem; color: var(--mid); margin-bottom: 1.2rem; line-height: 1.75; }
+
+    .case-results {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .result-num { font-weight: 700; font-size: 1.25rem; color: var(--navy); display: block; line-height: 1.1; }
+    .result-label { font-size: 0.69rem; color: var(--light); }
+
+    /* ── WHAT DRIVES ME ── */
+    #drives { background: var(--navy); }
+
+    .drives-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 6rem 6%;
+    }
+
+    .drives-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.5rem;
+    }
+
+    .drives-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+
+    .drives-divider {
+      width: 36px;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      margin-bottom: 2.5rem;
+    }
+
+    .drives-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .drives-text p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.97rem;
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+
+    .drives-text p strong { color: var(--white); }
+
+    .drives-research {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .drives-research-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 0.6rem;
+    }
+
+    .drives-research-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      line-height: 1.35;
+    }
+
+    .drives-research p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .drives-pillars { display: flex; flex-direction: column; gap: 0.7rem; margin-top: 1.2rem; }
+
+    .drives-pillar {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .drives-pillar-dot {
+      width: 6px;
+      height: 6px;
+      background: rgba(255,255,255,0.35);
+      border-radius: 50%;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--cream); }
+
+    .contact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 4rem;
+      text-align: center;
+    }
+
+    .contact-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .contact-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      color: var(--black);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .contact-box p {
+      color: var(--mid);
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--cream);
+      color: var(--dark);
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+      font-size: 0.83rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .contact-link:hover { background: var(--navy-pale); border-color: var(--navy); color: var(--navy); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem 6%;
+      border-top: 1px solid var(--border);
+      font-size: 0.79rem;
+      color: var(--light);
+      background: var(--white);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 750px) {
+      .nav-links { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .case-item { grid-template-columns: 1fr; }
+      .case-number { display: none; }
+      .drives-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-box { padding: 2.5rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#hero">Ana Romero</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#portfolio-preview">Portfolio</a></li>
+      <li><a href="#drives">What Drives Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-tag">📍 Barcelona · Open to Remote &amp; International Roles</div>
+    <h1 class="hero-title">Ana Romero</h1>
+    <p class="hero-tagline">Ideas with soul. Campaigns with purpose. Analysis with precision.</p>
+    <p class="hero-sub">
+      <strong>Paid Media Strategy · Business Growth · Data-Driven Marketing</strong><br/>
+      I build strategies that turn data into business results, connecting paid media performance with long-term brand growth across international markets.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">15%→80%</span>
+        <span class="hero-stat-label">Online bookings in 4 months</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">160K</span>
+        <span class="hero-stat-label">Organic views (TikTok)</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">12.8%</span>
+        <span class="hero-stat-label">Engagement rate (×3.6 baseline)</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">+850%</span>
+        <span class="hero-stat-label">Shares vs baseline</span>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#case-studies" class="btn-primary">View Case Studies</a>
+      <a href="#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Who I am</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div>
+          <div class="about-text">
+            <p>I specialise in <strong>paid media strategy and business growth</strong>, with solid experience across both the creative and analytical sides of marketing. I combine strategic thinking with hands-on execution, from designing full-funnel campaigns to translating performance data into decisions that move the business forward.</p>
+            <p>Throughout my career I have worked <strong>directly with clients and stakeholders</strong> in international environments, building relationships grounded in clarity, data-backed recommendations, and a genuine understanding of their growth objectives. That client-facing experience shapes how I communicate strategy and how I earn trust across teams and organisations.</p>
+            <p>I stay <strong>constantly up to date with what is working across platforms</strong>, from algorithm behaviour and paid media patterns to content formats that convert. In fast-moving digital environments, knowing the current landscape is not optional. It is the foundation of any strategy worth building.</p>
+            <p>My approach bridges <strong>performance rigour with creative sensibility</strong>. I am equally at home in a campaign briefing, a budget review, or a brand strategy session, and that flexibility allows me to contribute at every stage of a business growth strategy.</p>
+          </div>
+          <div class="about-strengths">
+            <div class="strength-item">
+              <div class="strength-num">01</div>
+              <div class="strength-text">
+                <strong>Data-informed creativity</strong>
+                <span>KPI-driven campaigns with over 160K organic views at Le Fidélia</span>
+              </div>
+            </div>
+            <div class="strength-item">
+              <div class="strength-num">02</div>
+              <div class="strength-text">
+                <strong>Strategic thinking</strong>
+                <span>End-to-end social strategies with 12.8% engagement rate and 3.5K+ shares</span>
+              </div>
+            </div>
+            <div class="strength-item">
+              <div class="strength-num">03</div>
+              <div class="strength-text">
+                <strong>International &amp; multicultural</strong>
+                <span>Fluent in 5 languages: Spanish, Catalan, English (C2), French (C1), Arabic (B2)</span>
+              </div>
+            </div>
+            <div class="strength-item">
+              <div class="strength-num">04</div>
+              <div class="strength-text">
+                <strong>AI &amp; automation fluency</strong>
+                <span>Built custom CRM pipelines, automated workflows with n8n and AI agents</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-facts">
+          <div class="fact-item">
+            <div class="fact-label">Based in</div>
+            <div class="fact-value">📍 Barcelona, Spain (08004)</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Available for</div>
+            <div class="fact-value">Full-time &amp; remote roles</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Languages</div>
+            <div class="fact-value">ES · CA · EN (C2) · FR (C1) · AR (B2)</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Currently studying</div>
+            <div class="fact-value">Global Master in Business Analytics &amp; Data Strategy — EAE</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Full Portfolio</div>
+            <div class="fact-value"><a href="portfolio.pdf" target="_blank" style="color:var(--navy);text-decoration:none;font-weight:600;">View full portfolio →</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-inner">
+      <p class="section-label">Work Experience</p>
+      <h2 class="section-title">Where I've worked</h2>
+      <div class="section-divider"></div>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-date">Feb 2026 – Present<br/>Barcelona, Spain</div>
+          <div>
+            <div class="exp-company">Otomatico</div>
+            <div class="exp-role">Ads &amp; Data Manager, Executive</div>
+            <ul class="exp-bullets">
+              <li><strong>Custom CRM pipeline:</strong> front-end integration between Meta Lead Ads API and Google Sheets to centralise and track B2B leads in real time, built without third-party CRM software.</li>
+              <li><strong>Full-funnel campaign management:</strong> creation, optimisation and performance tracking across awareness, consideration and conversion stages using Meta Business Suite.</li>
+              <li><strong>Performance analysis:</strong> Google Analytics and Google Trends used to inform campaign adjustments, audience targeting and budget allocation.</li>
+              <li><strong>AI-assisted workflows:</strong> AI agents and advanced prompt engineering to accelerate content production, campaign briefing and reporting automation.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Nov 2024 – Jan 2026<br/>Algiers, Algeria</div>
+          <div>
+            <div class="exp-company">Le Fidélia, International Hospitality Group</div>
+            <div class="exp-role">Brand Manager &amp; Social Media Strategist</div>
+            <ul class="exp-bullets">
+              <li><strong>End-to-end social media strategy:</strong> designed and led TikTok, Instagram and Search strategy aligned with business KPIs, reservations, brand equity and audience growth.</li>
+              <li><strong>Conversion optimisation:</strong> scaled online bookings from 15% to 80% of total volume in 4 months through platform-native, data-driven content.</li>
+              <li><strong>Organic reach:</strong> 160K views, 12.8% engagement rate and +850% shares via purpose-driven TikTok campaigns.</li>
+              <li><strong>Digital ecosystem:</strong> built web, POS and operations infrastructure enabling real-time demand tracking and resource optimisation.</li>
+              <li><strong>KPI tracking:</strong> defined and monitored reach (160K), engagement rate (12.8%), shares (+850% vs baseline), saves (+420% vs baseline).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-date">Jun 2024 – Oct 2024<br/>Barcelona, Spain</div>
+          <div>
+            <div class="exp-company">Strategic &amp; Performance Consultancy</div>
+            <div class="exp-role">Freelance Consultant</div>
+            <ul class="exp-bullets">
+              <li>Advised brands on social media strategy, organic growth and brand positioning.</li>
+              <li>Defined strategic frameworks based on audience analysis, business objectives and KPI measurement.</li>
+              <li>Translated performance data into actionable insights to drive continuous digital strategy optimisation.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+      <p class="section-label">Skills &amp; Tools</p>
+      <h2 class="section-title">What I bring</h2>
+      <div class="section-divider"></div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🎯</div>
+          <div class="skill-name">Paid Media &amp; Ads</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Meta Business Suite</span>
+            <span class="skill-tag">TikTok Ads</span>
+            <span class="skill-tag">Google Ads</span>
+            <span class="skill-tag">Full-Funnel Strategy</span>
+            <span class="skill-tag">Lead Generation</span>
+            <span class="skill-tag">A/B Testing</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <div class="skill-name">Analytics &amp; Tracking</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Google Analytics</span>
+            <span class="skill-tag">Google Trends</span>
+            <span class="skill-tag">KPI Tracking</span>
+            <span class="skill-tag">Audience Segmentation</span>
+            <span class="skill-tag">Demand Forecasting</span>
+            <span class="skill-tag">Performance Reporting</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <div class="skill-name">Content &amp; Social</div>
+          <div class="skill-tags">
+            <span class="skill-tag">TikTok Strategy</span>
+            <span class="skill-tag">Instagram / Reels</span>
+            <span class="skill-tag">SEO / SEM</span>
+            <span class="skill-tag">Storytelling</span>
+            <span class="skill-tag">Brand Strategy</span>
+            <span class="skill-tag">Content Architecture</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <div class="skill-name">AI &amp; Automation</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Agents</span>
+            <span class="skill-tag">Advanced Prompt Eng.</span>
+            <span class="skill-tag">Workflow Automation</span>
+            <span class="skill-tag">n8n</span>
+            <span class="skill-tag">Open WebUI</span>
+            <span class="skill-tag">Ollama</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <div class="skill-name">Technical</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Front-end Dev</span>
+            <span class="skill-tag">Meta API Integration</span>
+            <span class="skill-tag">Google Sheets</span>
+            <span class="skill-tag">CRM (custom-built)</span>
+            <span class="skill-tag">HubSpot</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <div class="skill-name">Strategy &amp; Growth</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Business Strategy</span>
+            <span class="skill-tag">Growth Marketing</span>
+            <span class="skill-tag">Campaign Briefing</span>
+            <span class="skill-tag">Budget Allocation</span>
+            <span class="skill-tag">Client Management</span>
+            <span class="skill-tag">Cross-platform Trends</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="case-studies">
+    <div class="section-inner">
+      <p class="section-label">Case Studies</p>
+      <h2 class="section-title">Strategy to impact</h2>
+      <div class="section-divider"></div>
+      <div class="case-list">
+
+        <div class="case-item">
+          <div class="case-number">01</div>
+          <div>
+            <div class="case-tag">Digital Ecosystem &amp; Conversion Strategy · Le Fidélia</div>
+            <div class="case-role">Role: Brand Manager, Web &amp; Data Lead</div>
+            <div class="case-title">From Physical Restaurant to Digital Ecosystem</div>
+            <div class="case-desc">Le Fidélia was an international hospitality group in Algeria facing low digital adoption and fragmented operations. The challenge was launching the restaurant in a low-digital-adoption market, creating a scalable ecosystem that could bridge cultural heritage with modern consumer behaviours. I designed and implemented an end-to-end web, POS and operations infrastructure to centralise reservations in real time, leveraged behavioural data for audience segmentation, and systematically optimised the conversion funnel from digital traffic to premium reservations.</div>
+            <div class="case-results">
+              <div><span class="result-num">15%→80%</span><span class="result-label">Online bookings in 4 months</span></div>
+              <div><span class="result-num">50%</span><span class="result-label">Gen Z audience share</span></div>
+              <div><span class="result-num">3</span><span class="result-label">Systems integrated (web, POS, ops)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-item">
+          <div class="case-number">02</div>
+          <div>
+            <div class="case-tag">Content Architecture &amp; Viral Growth · Le Fidélia</div>
+            <div class="case-role">Role: Community Manager, Brand Storytelling</div>
+            <div class="case-title">Turning Brand Purpose into Viral Reach</div>
+            <div class="case-desc">Le Fidélia required a strategic repositioning from local restaurant to cultural destination brand, leveraging content as a primary acquisition driver. I designed an omnichannel content ecosystem aligned with audience behaviour across the full conversion funnel: TikTok for discovery (Gen Z), Instagram for consideration (lifestyle and premium), and Search for decision (tourism and corporate). A purpose-driven TikTok campaign executed during Breast Cancer Awareness Month tested social relevance as an organic growth lever, resulting in engagement rates 3.6 times over baseline.</div>
+            <div class="case-results">
+              <div><span class="result-num">160K</span><span class="result-label">Organic views</span></div>
+              <div><span class="result-num">12.8%</span><span class="result-label">Engagement rate (×3.6)</span></div>
+              <div><span class="result-num">+850%</span><span class="result-label">Shares vs baseline</span></div>
+              <div><span class="result-num">+420%</span><span class="result-label">Saves vs baseline</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-item">
+          <div class="case-number">03</div>
+          <div>
+            <div class="case-tag">Fine Dining as Digital Product · Le Fidélia</div>
+            <div class="case-role">Role: Creative Director, Social Media Strategist</div>
+            <div class="case-title">Designing a Premium Digital Experience Through Reels</div>
+            <div class="case-desc">In a luxury dining market where users value aspiration and experience over product, I positioned Instagram Reels as a key channel for aspirational brand discovery. The strategy used lifestyle-over-product framing, selling experience and status by leveraging the historic venue as a distinctive tourism destination. Algorithm-native editing combined with trending minimalist audio optimised the Reel for Instagram's Discovery and Explore surfaces, with saves treated as the primary intent proxy and as a deferred booking signal rather than an immediate conversion tool.</div>
+            <div class="case-results">
+              <div><span class="result-num">112K</span><span class="result-label">Views on single Reel</span></div>
+              <div><span class="result-num">12%</span><span class="result-label">Engagement rate (+2×)</span></div>
+              <div><span class="result-num">1,400</span><span class="result-label">Saves (deferred intent)</span></div>
+              <div><span class="result-num">620</span><span class="result-label">Shares</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section id="portfolio-preview" style="background: var(--white);">
+    <div class="section-inner">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">Full Portfolio</h2>
+      <div class="section-divider"></div>
+      <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow: 0 4px 24px rgba(28,47,78,0.08);">
+        <div style="background:var(--cream); padding:1.2rem 1.8rem; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border);">
+          <div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--navy);">Portfolio 2026</span>
+            <p style="font-size:0.85rem; color:var(--mid); margin-top:0.2rem;">Ideas with soul. Campaigns with purpose. Analysis with precision.</p>
+          </div>
+          <a href="portfolio.pdf" target="_blank" class="btn-primary" style="white-space:nowrap; font-size:0.82rem; padding:0.7rem 1.5rem;">Open full PDF →</a>
+        </div>
+        <iframe
+          src="portfolio.pdf"
+          width="100%"
+          height="520"
+          style="display:block; border:none;"
+          title="Ana Romero Portfolio 2026">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT DRIVES ME -->
+  <section id="drives">
+    <div class="drives-inner">
+      <p class="drives-label">What Drives Me</p>
+      <h2 class="drives-title">Beyond the campaign</h2>
+      <div class="drives-divider"></div>
+      <div class="drives-grid">
+        <div class="drives-text">
+          <p>Beyond building campaigns that perform, I care deeply about <strong>what digital media is built for and who it includes.</strong> I believe that the way we design digital experiences, the platforms we choose, the content we create, and the audiences we target, carries a responsibility to reflect and serve the full diversity of human experience.</p>
+          <p>That conviction drives my interest in <strong>neurodivergence and AI,</strong> specifically in how artificial intelligence can be used not to replicate neurotypical norms, but to design more inclusive, more equitable digital environments. If the tools we build only work for some people, they are not truly working.</p>
+          <p>I want to contribute to a digital landscape where <strong>inclusion is built into the strategy from the start,</strong> not added as an afterthought. That means designing campaigns with cognitive diversity in mind, asking who is being left out, and using data and technology to build better answers.</p>
+        </div>
+        <div class="drives-research">
+          <div class="drives-research-tag">Research · Theoretical Thesis</div>
+          <div class="drives-research-title">Multisensory Perception, Neurodivergence and Artificial Intelligence</div>
+          <p>A theoretical hypothesis exploring how different perceptual profiles, including neurodivergent and neurotypical, receive the same idea differently when it is presented in different sensory formats generated through AI.</p>
+          <p>The study builds a conceptual framework for understanding how AI-generated stimuli interact with divergent perceptual systems, identifying the conditions, paradigms, and design decisions any empirical study in this field will need to resolve.</p>
+          <div class="drives-pillars">
+            <div class="drives-pillar"><div class="drives-pillar-dot"></div>Systematic evaluation of 8 stimulus candidates against 6 neuroscientific criteria</div>
+            <div class="drives-pillar"><div class="drives-pillar-dot"></div>Analysis of AI training bias and its impact on neurodivergent representation</div>
+            <div class="drives-pillar"><div class="drives-pillar-dot"></div>Framework for inclusive digital design informed by sensory processing research</div>
+            <div class="drives-pillar"><div class="drives-pillar-dot"></div>Advocates for AI systems that serve cognitive diversity, not just neurotypical norms</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <p class="section-label">Let's Talk</p>
+      <h2 class="section-title">Get in touch</h2>
+      <div class="section-divider"></div>
+      <div class="contact-box">
+        <div class="contact-eyebrow">Ready to grow together?</div>
+        <h3>Let's build something that actually works.</h3>
+        <p>If you are looking for someone who brings both strategic depth and real execution to paid media and business growth, I would love to be part of your team. Let's talk about what we can build together.</p>
+        <a href="mailto:ana181199aa@gmail.com" class="btn-primary">✉️ &nbsp;ana181199aa@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/ana-romero-lópez-9795b0378" class="contact-link" target="_blank">🔗 LinkedIn</a>
+          <a href="portfolio.pdf" class="contact-link" target="_blank">📄 Full Portfolio</a>
+          <a href="tel:+34621206760" class="contact-link">📞 +34 621 206 760</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ana Romero · Paid Media Strategy &amp; Business Growth · Barcelona · Open to International &amp; Remote Roles</p>
+  </footer>
+
+</body>
+</html>
