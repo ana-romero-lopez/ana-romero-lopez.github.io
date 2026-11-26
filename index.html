@@ -204,6 +204,12 @@
     .fid-grid img { width:100%; height:100%; object-fit:cover; border-radius:8px; border:1px solid var(--border); }
     .fid-grid .tall { grid-row:1 / 3; }
     @media (max-width:760px){ .fid-grid{ grid-template-rows:200px 200px; } }
+      .weights { display:grid; grid-template-columns:1fr; gap:1rem; background:var(--cream); border:1px solid var(--border); border-radius:10px; padding:1.2rem 1.3rem; }
+    .wh { font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-bottom:.5rem; }
+    .wr { display:grid; grid-template-columns:11rem 1fr 2.6rem; align-items:center; gap:.6rem; font-size:.78rem; color:var(--mid); margin:.28rem 0; }
+    .wr i { display:block; height:9px; border-radius:5px; background:linear-gradient(90deg,var(--navy) 0 calc(var(--w)*2.6),#e6e1d6 calc(var(--w)*2.6)); }
+    .wcol.alt .wr i { background:linear-gradient(90deg,var(--gold) 0 calc(var(--w)*2.6),#e6e1d6 calc(var(--w)*2.6)); }
+    .wr b { font-size:.74rem; color:var(--black); text-align:right; }
   </style>
 </head>
 <body>
@@ -231,7 +237,7 @@
         Marketing specialist in international growth for francophone Africa and LATAM. I combine market analysis, multilingual campaign execution and AI-based automation to run marketing operations that can be measured and scaled.
       </p>
       <div class="hero-stats">
-        <div><span class="hero-stat-num">37</span><span class="hero-stat-label">Competitors benchmarked for a product committee</span></div>
+        <div><span class="hero-stat-num">37</span><span class="hero-stat-label">Competitors benchmarked in a mystery shopping study</span></div>
         <div><span class="hero-stat-num">6</span><span class="hero-stat-label">Data sources in one full-funnel dashboard</span></div>
         <div><span class="hero-stat-num">10+</span><span class="hero-stat-label">Programmes marketed in 3 languages</span></div>
         <div><span class="hero-stat-num">15%→80%</span><span class="hero-stat-label">Online bookings in 4 months</span></div>
@@ -284,7 +290,7 @@
     <div class="section-inner">
       <p class="section-label">Part 1 · Analysis</p>
       <h2 class="section-title">Market analysis &amp; funnel intelligence</h2>
-      <p class="section-intro">How the market behaves and how our own funnel performs: the two questions that come before any campaign. Figures are shown as counts or process outputs to respect confidentiality.</p>
+      <p class="section-intro">How the market behaves and how our own funnel performs: the two questions that come before any campaign. All work is presented with public or anonymised information: no internal documents, client data, revenue or proprietary results.</p>
       <div class="section-divider"></div>
 
       <!-- CASE 01 -->
@@ -292,7 +298,7 @@
         <div class="case-head">
           <div class="case-number">01</div>
           <div>
-            <div class="case-tag">Competitive intelligence · Product committee · Higher education</div>
+            <div class="case-tag">Competitive intelligence · Higher education</div>
             <div class="case-role">Role: Research design, fieldwork and analysis</div>
             <h3 class="case-title">Designing and running a mystery shopping study of 37 competitors</h3>
           </div>
@@ -300,10 +306,10 @@
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>Before launching a new programme portfolio for 2027, the product committee needed first-hand evidence of how francophone institutions active in Africa attract, contact and convert prospects, and a consistent way to compare them.</p></div>
+              <p>Ahead of a new programme launch, the team needed first-hand evidence of how institutions in francophone Africa attract, contact and convert prospects, and a consistent way to compare them.</p></div>
             <div class="case-block"><h4>Research design</h4>
               <ul>
-                <li><strong>Sample:</strong> 37 institutions across 7 programme areas — 31 from the committee's shortlist and 6 added after searching as a prospect would, through Google, ChatGPT, paid search and the press.</li>
+                <li><strong>Sample:</strong> 37 institutions across 7 programme areas — an initial shortlist extended by searching as a prospect would, through Google, ChatGPT, paid search and the press.</li>
                 <li><strong>Standardised prospect profile:</strong> one fictional persona with a defined professional background and scripted objections (price, workload, accreditation), used identically with every institution.</li>
                 <li><strong>Contact protocol:</strong> information requested through each institution's own channels (web form, email or WhatsApp), with a scripted reminder and a common closing date so every institution had the same chance to respond.</li>
               </ul></div>
@@ -315,17 +321,27 @@
               </ul></div>
           </div>
           <div>
-            <div class="case-media">
-              <img src="mystery-scoring.jpg" alt="Scoring model slide from the committee report"/>
-              <img src="mystery-funnel.jpg" alt="Contact funnel: 37 requests, 24 replies, 17 human contacts, 6 high-value answers"/>
-              <p class="caption">From the 31-slide committee report (in Spanish): scoring model and contact funnel. Competitor names removed.</p>
+            <div class="weights" aria-label="Scoring model weights">
+              <div class="wcol"><div class="wh">Commercial · 50%</div>
+                <div class="wr"><span>Conversation quality</span><i style="--w:35%"></i><b>35%</b></div>
+                <div class="wr"><span>Response speed</span><i style="--w:30%"></i><b>30%</b></div>
+                <div class="wr"><span>Follow-up</span><i style="--w:20%"></i><b>20%</b></div>
+                <div class="wr"><span>Omnichannel</span><i style="--w:15%"></i><b>15%</b></div>
+              </div>
+              <div class="wcol alt"><div class="wh">Digital marketing · 50%</div>
+                <div class="wr"><span>Landing page</span><i style="--w:30%"></i><b>30%</b></div>
+                <div class="wr"><span>SEO &amp; AI-search visibility</span><i style="--w:25%"></i><b>25%</b></div>
+                <div class="wr"><span>Meta Ads</span><i style="--w:20%"></i><b>20%</b></div>
+                <div class="wr"><span>Social media</span><i style="--w:15%"></i><b>15%</b></div>
+                <div class="wr"><span>Google Maps</span><i style="--w:10%"></i><b>10%</b></div>
+              </div>
             </div>
             <div class="case-block" style="margin-top:1.2rem"><h4>Scoring model</h4>
-              <p>Each institution was scored 0–100 in two equally weighted blocks: <strong>commercial</strong> (quality of the conversation 35%, response speed 30%, follow-up 20%, omnichannel 15%) and <strong>digital marketing</strong> (landing page 30%, SEO and AI-search visibility 25%, Meta Ads 20%, social media 15%, Google Maps 10%).</p></div>
+              <p>Each institution was scored 0–100 in two equally weighted blocks, commercial and digital marketing, so that sales process and online presence could be compared on the same scale.</p></div>
             <div class="case-block"><h4>Analysis and output</h4>
-              <p>Results were analysed by area — sales process, pricing, landing pages, search visibility, ads, creatives and social — to identify the patterns shared by the best performers. The study closed with three prioritised recommendations on offer, creatives and landing pages for the committee.</p>
-              <div class="pill-row" style="margin-top:.6rem"><span class="pill">Contact log (Excel)</span><span class="pill">Scoring model</span><span class="pill">31-slide committee report</span><span class="pill">Recommendations</span></div>
-              <p class="note-small">Competitor names, prices and contact details are omitted.</p></div>
+              <p>Results were analysed by area — sales process, pricing, landing pages, search visibility, ads, creatives and social — to identify the patterns shared by the best performers. The study closed with prioritised recommendations for management.</p>
+              <div class="pill-row" style="margin-top:.6rem"><span class="pill">Contact log</span><span class="pill">Scoring model</span><span class="pill">Analysis report</span><span class="pill">Recommendations</span></div>
+              <p class="note-small">Competitor names, prices, results and recommendations are not disclosed.</p></div>
           </div>
         </div>
         <div class="case-results">
@@ -349,21 +365,21 @@
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>Campaign, sales and CRM data were reported separately: Meta lead reports for Africa and LATAM, agency paid and organic reports, opportunities in the Atenea CRM (Dynamics 365), the sales log and enrolment targets per intake. Marketing reported leads, sales reported enrolments, and there was no shared view of which campaigns actually produced students.</p></div>
+              <p>Campaign, sales and CRM data lived in separate reports: Meta lead exports by region, agency paid and organic reports, opportunities in Atenea (the group's CRM on Microsoft Dynamics 365) and enrolment targets per intake. There was no single view of which campaigns turned into enrolments.</p></div>
             <div class="case-block"><h4>What it covers · 11 views in 4 areas</h4>
               <ul>
                 <li><strong>Strategy:</strong> overview and a marketing-to-sales view with lead-to-enrolment conversion by campaign, programme, intake and country. Each campaign is classified automatically as <em>Scale · Converts despite friction · Volume without quality · Review</em>.</li>
                 <li><strong>Digital marketing:</strong> lead quality by campaign, country and programme, weekly lead evolution, and agency paid and organic KPIs by objective and geographic focus.</li>
-                <li><strong>Sales:</strong> the opportunity pipeline from Atenea, time to first contact and bottlenecks per advisor, unreachable leads, loss reasons, and enrolments against target for each intake.</li>
+                <li><strong>Sales:</strong> every Atenea opportunity followed through the commercial funnel — appointment, interview, documentation, admissions committee, proposal and payment — with time to first contact, contact rate, loss reasons and enrolments against target for each intake.</li>
                 <li><strong>Data governance:</strong> a validation layer that checks every upload before it reaches reporting — country-code mapping, campaign-name consistency between Meta and the CRM, out-of-range engagement values and reporting-period alignment. Exceptions are flagged for review and source data is never overwritten.</li>
               </ul></div>
             <div class="case-block"><h4>How it is built</h4>
-              <p>A single-file web app (HTML, JavaScript, SheetJS, Chart.js) that reads the original Excel exports directly, with no server or licence. It applies the team's business rules — Wednesday-to-Tuesday commercial weeks, campaign-name mapping across file versions, pacing against each intake's start date — and is refreshed with every CRM and Meta export.</p></div>
+              <p>A single-file web app (HTML, JavaScript, SheetJS, Chart.js) that reads the original Excel exports directly, with no server or licence. It applies the team's reporting rules — commercial weeks, campaign-name mapping across file versions, pacing against each intake's start date — and is refreshed with every CRM and Meta export.</p></div>
           </div>
           <div class="case-media">
             <img src="dash-cruce.jpg" alt="Marketing-to-sales view of the dashboard"/>
             <img src="dash-resumen.jpg" alt="Dashboard overview"/>
-            <p class="caption">Demo with synthetic data. Real figures are confidential.</p>
+            <p class="caption">Demo recreated with synthetic data. Third-party names and revenue fields are anonymised or removed.</p>
           </div>
         </div>
         <div class="case-results">
@@ -444,12 +460,12 @@
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>Paid media generated volume, but a significant share of leads was never reached by sales, past students were not being re-engaged, and programmes lacked local social proof.</p></div>
+              <p>Turning paid-media volume into enrolments needed structured follow-up at every stage: nurturing new leads, recovering those sales could not reach, re-engaging graduates and building local social proof.</p></div>
             <div class="case-block"><h4>Three flows</h4>
               <ul>
                 <li><strong>Stage-based lead nurturing (Dynamics 365):</strong> email templates by pipeline stage, handed from Marketing to Sales for Africa and LATAM, in French and Spanish.</li>
                 <li><strong>Reactivation of unreachable leads:</strong> follow-up emails and WhatsApp surveys to recover contacts sales could not reach.</li>
-                <li><strong>Graduate cross-sell journey:</strong> a three-phase route offering a leadership pathway to past students — landing page, advisor training, two emails, a call campaign and a time-limited offer.</li>
+                <li><strong>Graduate cross-sell journey:</strong> a three-phase route offering past students a follow-on programme — landing page, advisor briefing, email sequence and call campaign.</li>
               </ul></div>
           </div>
           <div>
@@ -464,7 +480,7 @@
           <div class="st"><b>Nurture</b>Dynamics 365 emails by stage, FR · ES</div><span class="ar">→</span>
           <div class="st hl"><b>Unreachable?</b>Reactivation by email and WhatsApp survey</div><span class="ar">→</span>
           <div class="st"><b>Sales</b>Advisor call and enrolment</div><span class="ar">→</span>
-          <div class="st"><b>Graduate</b>Cross-sell to the leadership pathway</div><span class="ar">→</span>
+          <div class="st"><b>Graduate</b>Cross-sell to a follow-on programme</div><span class="ar">→</span>
           <div class="st hl"><b>Testimonial</b>Five formats that feed new leads</div>
         </div>
         <div class="case-results">
@@ -550,7 +566,7 @@
           <div class="case-number">06</div>
           <div>
             <div class="case-tag">Marketing automation · AI · Open source</div>
-            <div class="case-role">Role: Designed and built it at Otomatico, now also used in my current role · Python, Meta Marketing API, Claude API</div>
+            <div class="case-role">Role: Designed and built it at Otomatico · Python, Meta Marketing API, Claude API</div>
             <h3 class="case-title">Meta Ads AI Monitor: daily campaign diagnosis with the Claude API</h3>
           </div>
         </div>
@@ -577,7 +593,7 @@
           <div><span class="result-num">Daily</span><span class="result-label">Automated report with actions per campaign</span></div>
           <div><span class="result-num">4</span><span class="result-label">Configurable alert thresholds</span></div>
           <div><span class="result-num">9</span><span class="result-label">Root-cause categories for the AI diagnosis</span></div>
-          <div><span class="result-num">2</span><span class="result-label">Companies where it runs daily</span></div>
+          <div><span class="result-num">Open</span><span class="result-label">Source code public on GitHub</span></div>
         </div>
       </article>
 
@@ -619,7 +635,7 @@
               <li><strong>Lifecycle &amp; CRM:</strong> stage-based email programmes in Dynamics 365, a graduate cross-sell journey and a lead-reactivation flow (email, WhatsApp, surveys).</li>
               <li><strong>Multichannel acquisition:</strong> creatives, short-form video and copy for 10+ programmes in Spanish, French and English, in coordination with the paid media agency and Sales.</li>
               <li><strong>Partner marketing:</strong> onboarding and co-marketing with 10+ universities and corporate partners; B2B presentations in French and Spanish.</li>
-              <li><strong>Data &amp; intelligence:</strong> full-funnel marketing–sales dashboard, competitor mystery shopping for the product committee, daily Meta Ads monitoring with my own Python and Claude API tool, and implementation of the technical SEO audit, including AI-search visibility.</li>
+              <li><strong>Data &amp; intelligence:</strong> full-funnel marketing–sales dashboard, competitor mystery shopping and implementation of the technical SEO audit, including AI-search visibility.</li>
             </ul>
           </div>
         </div>
