@@ -35,7 +35,7 @@
     .hero-role { font-size: 1.12rem; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
     .hero-tagline { font-size: 1.05rem; color: var(--light); font-weight: 300; font-style: italic; margin-bottom: 1.4rem; }
     .hero-sub { font-size: 1.02rem; color: var(--mid); max-width: 600px; margin-bottom: 2.2rem; line-height: 1.8; }
-    .hero-stats { display: grid; grid-template-columns: repeat(4, auto); gap: 1.8rem; margin-bottom: 2.6rem; justify-content: start; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, auto); gap: 1.8rem; margin-bottom: 2.6rem; justify-content: start; }
     .hero-stat-num { font-size: 1.5rem; font-weight: 700; color: var(--navy); display: block; line-height: 1; margin-bottom: 0.3rem; }
     .hero-stat-label { font-size: 0.72rem; color: var(--light); letter-spacing: 0.03em; max-width: 150px; display: block; line-height: 1.4; }
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
@@ -115,7 +115,7 @@
 
     /* GALLERY */
 
-    .gallery { columns: 4 220px; column-gap: 1rem; }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; align-items: start; }
     .gallery figure { break-inside: avoid; margin-bottom: 1rem; background: var(--white); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
     .gallery figcaption { font-size: 0.72rem; color: var(--mid); padding: 0.6rem 0.8rem; line-height: 1.45; }
     .gallery figcaption b { color: var(--navy); display: block; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -210,6 +210,20 @@
     .wr i { display:block; height:9px; border-radius:5px; background:linear-gradient(90deg,var(--navy) 0 calc(var(--w)*2.6),#e6e1d6 calc(var(--w)*2.6)); }
     .wcol.alt .wr i { background:linear-gradient(90deg,var(--gold) 0 calc(var(--w)*2.6),#e6e1d6 calc(var(--w)*2.6)); }
     .wr b { font-size:.74rem; color:var(--black); text-align:right; }
+      .gallery figure { margin-bottom: 0; }
+    @media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+    .insights { display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; padding:0 2.4rem 2.2rem 6.6rem; }
+    .insight { background:var(--white); border:1px solid var(--border); border-radius:10px; padding:1.2rem 1.3rem; }
+    .insight h5 { font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--navy); margin-bottom:.3rem; }
+    .insight .n { font-size:.72rem; color:var(--light); margin-bottom:.8rem; }
+    .bar { display:grid; grid-template-columns:1fr auto; column-gap:.5rem; row-gap:.2rem; align-items:center; font-size:.76rem; color:var(--mid); margin:.45rem 0; }
+    .bar i { grid-column:1 / -1; grid-row:2; display:block; height:8px; border-radius:4px; background:linear-gradient(90deg,var(--navy) 0 var(--w),#e6e1d6 var(--w)); }
+    .bar.hl i { background:linear-gradient(90deg,var(--gold) 0 var(--w),#e6e1d6 var(--w)); }
+    .bar b { text-align:right; color:var(--black); font-size:.74rem; }
+    .insight .read { margin-top:.8rem; padding-top:.7rem; border-top:1px solid var(--border); font-size:.8rem; color:var(--black); line-height:1.5; }
+    .insights-title { padding:0 2.4rem .8rem 6.6rem; font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--navy); }
+    .fid-single img { width:100%; height:520px; object-fit:cover; border-radius:10px; border:1px solid var(--border); display:block; }
+    @media (max-width:900px){ .insights,.insights-title{ grid-template-columns:1fr; padding-left:1.4rem; padding-right:1.4rem; } .fid-single img{ height:360px; } }
   </style>
 </head>
 <body>
@@ -229,18 +243,17 @@
   <!-- HERO -->
   <section id="hero">
     <div>
-      <div class="hero-tag">📍 Barcelona · Open to Remote &amp; International Roles</div>
+      <div class="hero-tag">📍 Barcelona · Open to International Roles</div>
       <h1 class="hero-title">Ana Romero</h1>
-      <p class="hero-role">International Growth &amp; Marketing Technology</p>
+      <p class="hero-role">International Growth &amp; Marketing Strategy</p>
       <p class="hero-tagline">Ideas with soul. Campaigns with purpose. Analysis with precision.</p>
       <p class="hero-sub">
-        Marketing specialist in international growth for francophone Africa and LATAM. I combine market analysis, multilingual campaign execution and AI-based automation to run marketing operations that can be measured and scaled.
+        Marketing specialist in international growth for francophone Africa and LATAM. I analyse how competitors shape each market, turn that into go-to-market and campaign strategy, and connect marketing, sales and CRM data so every decision can be traced from first lead to enrolment.
       </p>
       <div class="hero-stats">
-        <div><span class="hero-stat-num">37</span><span class="hero-stat-label">Competitors benchmarked in a mystery shopping study</span></div>
+        <div><span class="hero-stat-num">37</span><span class="hero-stat-label">Competitors analysed in a mystery shopping study</span></div>
         <div><span class="hero-stat-num">6</span><span class="hero-stat-label">Data sources in one full-funnel dashboard</span></div>
         <div><span class="hero-stat-num">10+</span><span class="hero-stat-label">Programmes marketed in 3 languages</span></div>
-        <div><span class="hero-stat-num">15%→80%</span><span class="hero-stat-label">Online bookings in 4 months</span></div>
       </div>
       <div class="hero-cta">
         <a href="#analysis" class="btn-primary">View Case Studies</a>
@@ -257,14 +270,13 @@
   <section id="about">
     <div class="section-inner">
       <p class="section-label">About Me</p>
-      <h2 class="section-title">Building bridges between markets, data and people</h2>
+      <h2 class="section-title">Building bridges between markets,<br/>data and people</h2>
       <div class="section-divider"></div>
       <div class="about-grid">
         <div>
           <div class="about-text">
-            <p>I work in <strong>international growth for higher education</strong> at IBERONEX (Grupo Planeta), marketing executive programmes co-certified with European and local universities in <strong>francophone Africa and LATAM</strong>.</p>
-            <p>My work covers three areas: <strong>market analysis</strong> to decide where and how to compete, <strong>campaign and lifecycle execution</strong> in Spanish, French and English, and the <strong>data and automation systems</strong> that track the funnel from first lead to enrolment.</p>
-            <p>Previously I was Social Media Manager &amp; Brand Strategist at Le Fidélia in Algiers, where online bookings grew from 15% to 80% of volume, and Paid Media Manager at Otomatico, where I built Python and LLM-based automation for B2B campaigns. I am completing the <strong>Global Master in Business Analytics and Data Strategy</strong> at EAE Business School.</p>
+            <p>Growing a programme in a new market starts long before the first campaign. At IBERONEX (Grupo Planeta) I work out how each market behaves, where our offer can win, and the marketing that takes it there — for executive programmes co-certified with European and local universities in <strong>francophone Africa and LATAM</strong>.</p>
+            <p>Every part of my work feeds business decisions: <strong>market analysis</strong> shapes which programmes we launch and where we invest; <strong>campaign and lifecycle execution</strong> in Spanish, French and English turns that positioning into enrolments; and <strong>data and automation systems</strong> give marketing and sales the same view of the funnel, so budget and product decisions rest on evidence rather than assumptions.</p>
           </div>
           <div class="about-strengths">
             <div class="strength-item"><div class="strength-num">01</div><div class="strength-text"><strong>Market analysis</strong><span>Competitive benchmarking, scoring models and full-funnel analytics</span></div></div>
@@ -276,10 +288,8 @@
         <div class="about-facts">
           <div class="fact-item"><div class="fact-label">Based in</div><div class="fact-value">📍 Barcelona, Spain</div></div>
                     <div class="fact-item"><div class="fact-label">Markets</div><div class="fact-value">Francophone Africa · LATAM · North Africa · Spain</div></div>
-          <div class="fact-item"><div class="fact-label">Languages</div><div class="fact-value">ES · CA · EN (C1) · FR (C1) · AR (B2)</div></div>
+          <div class="fact-item"><div class="fact-label">Languages</div><div class="fact-value">Spanish &amp; Catalan (native) · English (C1) · French (C1) · Arabic (B2)</div></div>
           <div class="fact-item"><div class="fact-label">Studying</div><div class="fact-value">Global Master in Business Analytics and Data Strategy — EAE Business School</div></div>
-          <div class="fact-item"><div class="fact-label">LinkedIn</div><div class="fact-value"><a href="https://www.linkedin.com/in/ana-romero-l%C3%B3pez-9795b0378" target="_blank" rel="noopener">linkedin.com/in/ana-romero-lópez-9795b0378</a></div></div>
-          <div class="fact-item"><div class="fact-label">Full portfolio</div><div class="fact-value"><a href="Ana-Romero-Portfolio-2026.pdf" target="_blank">Download PDF →</a></div></div>
         </div>
       </div>
     </div>
@@ -290,7 +300,7 @@
     <div class="section-inner">
       <p class="section-label">Part 1 · Analysis</p>
       <h2 class="section-title">Market analysis &amp; funnel intelligence</h2>
-      <p class="section-intro">How the market behaves and how our own funnel performs: the two questions that come before any campaign. All work is presented with public or anonymised information: no internal documents, client data, revenue or proprietary results.</p>
+      <p class="section-intro">Analysing how competitors define the market shows how much weight our strategy can carry in it, where our value can scale, and how to align the product with the latest trends. Figures are shown as counts or process outputs to respect confidentiality.</p>
       <div class="section-divider"></div>
 
       <!-- CASE 01 -->
@@ -299,26 +309,23 @@
           <div class="case-number">01</div>
           <div>
             <div class="case-tag">Competitive intelligence · Higher education</div>
-            <div class="case-role">Role: Research design, fieldwork and analysis</div>
-            <h3 class="case-title">Designing and running a mystery shopping study of 37 competitors</h3>
+            <div class="case-role">Role: Research design, fieldwork, data analysis and strategy</div>
+            <h3 class="case-title">Mystery shopping of 37 competitors to size our bet on the francophone market</h3>
           </div>
         </div>
         <div class="case-body">
           <div>
-            <div class="case-block"><h4>Challenge</h4>
-              <p>Ahead of a new programme launch, the team needed first-hand evidence of how institutions in francophone Africa attract, contact and convert prospects, and a consistent way to compare them.</p></div>
-            <div class="case-block"><h4>Research design</h4>
+            <div class="case-block"><h4>Context</h4>
+              <p>An analysis of the francophone higher-education market to gauge how strong our bet on it could be in the 2027 forecast.</p></div>
+            <div class="case-block"><h4>What I did</h4>
               <ul>
-                <li><strong>Sample:</strong> 37 institutions across 7 programme areas — an initial shortlist extended by searching as a prospect would, through Google, ChatGPT, paid search and the press.</li>
-                <li><strong>Standardised prospect profile:</strong> one fictional persona with a defined professional background and scripted objections (price, workload, accreditation), used identically with every institution.</li>
-                <li><strong>Contact protocol:</strong> information requested through each institution's own channels (web form, email or WhatsApp), with a scripted reminder and a common closing date so every institution had the same chance to respond.</li>
-              </ul></div>
-            <div class="case-block"><h4>Fieldwork and audit</h4>
-              <ul>
-                <li><strong>Contact log:</strong> every touchpoint recorded with date, channel and response time, and each conversation rated 1–5 for personalisation and information quality.</li>
-                <li><strong>Digital audit of each competitor:</strong> mobile PageSpeed and landing-page content, technical SEO checks, 11 geolocated Google searches, 5 ChatGPT prompts, Google Maps listings, active ads in the Meta Ad Library and organic social activity over the last 30 days.</li>
-                <li><strong>Creative analysis:</strong> 20 active ads reviewed for format, message, price, proof points and call to action.</li>
-              </ul></div>
+                <li><strong>Study design and data model:</strong> 37 institutions across 7 programme areas, mapped by country, programme and competitor type, in a single data model covering the contact log, landing pages, social media, Meta Ad Library, Google results, ChatGPT visibility, brochures and prices normalised to euros.</li>
+                <li><strong>Clean, automated tracking:</strong> every touchpoint categorised by channel, sender, automated or human, content and next step, with templated follow-ups and responses to keep the fictitious prospect profile consistent and the dataset clean.</li>
+                <li><strong>Sales-process stress test:</strong> mapping each competitor's friction points and objection handling — speed to lead, qualification questions, sales arguments, offers, urgency tactics and follow-up cadence.</li>
+                <li><strong>Full-funnel audit:</strong> SEO with geolocated Google searches, AI-search visibility in ChatGPT, paid social through 94 active Meta ads, landing pages (mobile PageSpeed, messaging, forms), organic social and Google Maps.</li>
+                <li><strong>Analysis and score modelling:</strong> pattern identification across the best performers and a weighted score model to position our offer against the market, delivered as an analysis report with prioritised recommendations for management.</li>
+              </ul>
+              <p class="note-small">Competitor names, prices and our own results are not disclosed.</p></div>
           </div>
           <div>
             <div class="weights" aria-label="Scoring model weights">
@@ -336,19 +343,20 @@
                 <div class="wr"><span>Google Maps</span><i style="--w:10%"></i><b>10%</b></div>
               </div>
             </div>
-            <div class="case-block" style="margin-top:1.2rem"><h4>Scoring model</h4>
-              <p>Each institution was scored 0–100 in two equally weighted blocks, commercial and digital marketing, so that sales process and online presence could be compared on the same scale.</p></div>
-            <div class="case-block"><h4>Analysis and output</h4>
-              <p>Results were analysed by area — sales process, pricing, landing pages, search visibility, ads, creatives and social — to identify the patterns shared by the best performers. The study closed with prioritised recommendations for management.</p>
-              <div class="pill-row" style="margin-top:.6rem"><span class="pill">Contact log</span><span class="pill">Scoring model</span><span class="pill">Analysis report</span><span class="pill">Recommendations</span></div>
-              <p class="note-small">Competitor names, prices, results and recommendations are not disclosed.</p></div>
+            <p class="caption">Weighted score model (0–100): sales process and online presence compared on the same scale.</p>
           </div>
         </div>
-        <div class="case-results">
-          <div><span class="result-num">37</span><span class="result-label">Institutions analysed</span></div>
-          <div><span class="result-num">7 days</span><span class="result-label">Of live fieldwork</span></div>
-          <div><span class="result-num">9</span><span class="result-label">Weighted scoring criteria</span></div>
-          <div><span class="result-num">3</span><span class="result-label">Contact channels: web form, email, WhatsApp</span></div>
+        <div class="insights-title">What the market data showed · anonymised aggregates</div>
+        <div class="insights">
+          <div class="insight"><h5>Speed to lead</h5><div class="n">First human contact · 37 institutions</div>
+            <div class="bar"><span>Under 1 hour</span><i style="--w:5%"></i><b>5%</b></div><div class="bar"><span>1–24 hours</span><i style="--w:16%"></i><b>16%</b></div><div class="bar"><span>1–3 days</span><i style="--w:3%"></i><b>3%</b></div><div class="bar"><span>Over 3 days</span><i style="--w:16%"></i><b>16%</b></div><div class="bar hl"><span>Never</span><i style="--w:59%"></i><b>59%</b></div>
+            <div class="read">Most competitors never reach a human conversation: fast, personal follow-up is a differentiator in itself.</div></div>
+          <div class="insight"><h5>Landing pages</h5><div class="n">Share showing each element · 35 pages</div>
+            <div class="bar"><span>Brochure</span><i style="--w:51%"></i><b>51%</b></div><div class="bar"><span>Chat / WhatsApp</span><i style="--w:51%"></i><b>51%</b></div><div class="bar"><span>Price</span><i style="--w:43%"></i><b>43%</b></div><div class="bar"><span>Start dates</span><i style="--w:40%"></i><b>40%</b></div><div class="bar"><span>Urgency</span><i style="--w:26%"></i><b>26%</b></div><div class="bar hl"><span>Funding options</span><i style="--w:14%"></i><b>14%</b></div>
+            <div class="read">Fewer than half show price or start dates, and only 14% mention funding: decision information is a gap to own.</div></div>
+          <div class="insight"><h5>Ad angles</h5><div class="n">Main message · 94 active Meta ads</div>
+            <div class="bar"><span>Content / syllabus</span><i style="--w:32%"></i><b>32%</b></div><div class="bar"><span>Flexibility</span><i style="--w:29%"></i><b>29%</b></div><div class="bar"><span>Employability</span><i style="--w:23%"></i><b>23%</b></div><div class="bar hl"><span>Alumni testimonial</span><i style="--w:6%"></i><b>6%</b></div><div class="bar"><span>Prestige</span><i style="--w:5%"></i><b>5%</b></div><div class="bar"><span>Price / grant</span><i style="--w:3%"></i><b>3%</b></div><div class="bar hl"><span>Accreditation</span><i style="--w:1%"></i><b>1%</b></div>
+            <div class="read">Ads sell syllabus and flexibility; proof is almost absent. Alumni testimonials and accreditation are open ground.</div></div>
         </div>
       </article>
 
@@ -359,22 +367,23 @@
           <div>
             <div class="case-tag">Full-funnel analytics · Marketing ops · Higher education</div>
             <div class="case-role">Role: Designed and built it</div>
-            <h3 class="case-title">A full-funnel dashboard connecting marketing, sales and CRM by programme, intake and country</h3>
+            <h3 class="case-title">A full-funnel dashboard connecting marketing, sales and CRM<br/>by programme, intake and country</h3>
           </div>
         </div>
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>Campaign, sales and CRM data lived in separate reports: Meta lead exports by region, agency paid and organic reports, opportunities in Atenea (the group's CRM on Microsoft Dynamics 365) and enrolment targets per intake. There was no single view of which campaigns turned into enrolments.</p></div>
+              <p>In a mid-sized organisation where departments have to work closely together, separate reports only add friction: to selling the product and to keeping teams aligned. The decision was to unify everything in one dashboard, so each team sees its own part and understands the other perspectives that shape the product funnel — Meta leads by region, SEO and SEM data from our external agencies, opportunities in Atenea (the group's CRM on Microsoft Dynamics 365) and enrolment targets per intake.</p>
+              <p style="margin-top:.6rem">We also added a data-veracity filter, to be sure decisions rested on real data and not on a hypothetical bubble of what the product was delivering.</p></div>
             <div class="case-block"><h4>What it covers · 11 views in 4 areas</h4>
               <ul>
                 <li><strong>Strategy:</strong> overview and a marketing-to-sales view with lead-to-enrolment conversion by campaign, programme, intake and country. Each campaign is classified automatically as <em>Scale · Converts despite friction · Volume without quality · Review</em>.</li>
-                <li><strong>Digital marketing:</strong> lead quality by campaign, country and programme, weekly lead evolution, and agency paid and organic KPIs by objective and geographic focus.</li>
+                <li><strong>Digital marketing:</strong> lead quality by campaign, country and programme, weekly lead evolution, and SEO and SEM KPIs from our external agencies, by objective and geographic focus.</li>
                 <li><strong>Sales:</strong> every Atenea opportunity followed through the commercial funnel — appointment, interview, documentation, admissions committee, proposal and payment — with time to first contact, contact rate, loss reasons and enrolments against target for each intake.</li>
-                <li><strong>Data governance:</strong> a validation layer that checks every upload before it reaches reporting — country-code mapping, campaign-name consistency between Meta and the CRM, out-of-range engagement values and reporting-period alignment. Exceptions are flagged for review and source data is never overwritten.</li>
+                <li><strong>Data veracity:</strong> every upload is validated before it reaches reporting — country-code mapping, campaign names consistent between Meta and the CRM, out-of-range values and reporting-period alignment. Exceptions are flagged for review and source data is never overwritten.</li>
               </ul></div>
             <div class="case-block"><h4>How it is built</h4>
-              <p>A single-file web app (HTML, JavaScript, SheetJS, Chart.js) that reads the original Excel exports directly, with no server or licence. It applies the team's reporting rules — commercial weeks, campaign-name mapping across file versions, pacing against each intake's start date — and is refreshed with every CRM and Meta export.</p></div>
+              <p>A single-file web app (HTML, JavaScript, SheetJS, Chart.js) that reads Excel exports directly, with no server or licence. It works with any Excel file whose columns follow the defined data schema, applies the team's reporting rules — commercial weeks, campaign-name mapping across file versions, pacing against each intake's start date — and is refreshed with every CRM and Meta export.</p></div>
           </div>
           <div class="case-media">
             <img src="dash-cruce.jpg" alt="Marketing-to-sales view of the dashboard"/>
@@ -406,31 +415,32 @@
           <div class="case-number">03</div>
           <div>
             <div class="case-tag">Go-to-market · Francophone Africa · Higher education</div>
-            <div class="case-role">Role: Launch communications lead</div>
-            <h3 class="case-title">Launching an executive programme in Côte d'Ivoire with two academic partners</h3>
+            <div class="case-role">Role: Launch marketing and partner communications lead</div>
+            <h3 class="case-title">Launching a new executive programme in Côte d'Ivoire with two academic partners</h3>
           </div>
         </div>
         <div class="case-body">
           <div>
-            <div class="case-block"><h4>Challenge</h4>
-              <p>The group signed an alliance with Université Félix Houphouët-Boigny, Côte d'Ivoire's leading university, to co-certify a new programme with ESLSCA Business School: <em>Intelligence Territoriale</em>, 12 weeks, fully online, in French. The brand was new to the market, every asset needed approval from three institutions, and recruitment worked to a fixed start date.</p></div>
+            <div class="case-block"><h4>Context</h4>
+              <p>We developed a disruptive executive programme for Côte d'Ivoire, <em>Intelligence Territoriale</em> (12 weeks, fully online, in French), after analysing which topics had the most potential for our local ICP. It is co-certified with Université Félix Houphouët-Boigny, the country's leading university, and a renowned French business school.</p>
+              <p style="margin-top:.6rem">We owned the full marketing and outreach strategy, both in our own database and in the partner institutions' databases.</p></div>
             <div class="case-block"><h4>What I did</h4>
               <ul>
-                <li><strong>Launch plan</strong> aligned with the programme's institutional timeline, from the alliance announcement to the programme start.</li>
-                <li><strong>Full asset kit in French:</strong> partner member page and programme landing page, web news, brochure, organic and paid creatives, launch reel (script and production) and CRM email templates for both institutions.</li>
+                <li><strong>Launch plan</strong> aligned with the programme's institutional timeline, from the partnership announcement to the programme start.</li>
+                <li><strong>Full asset kit in French:</strong> partner member page and programme landing page, web news, brochure, organic and paid creatives, launch reel (script and production) and CRM email templates for every institution involved.</li>
                 <li><strong>Sales enablement:</strong> email sequences and templates for advisors in Dynamics 365, and sales arguments for the advisor briefing.</li>
-                <li><strong>Partner management:</strong> follow-up presentations in French for the university's communications committee and joint organic content, with UTM-tagged links so each institution could attribute its own leads.</li>
+                <li><strong>Partner communication:</strong> ongoing follow-up with the partner institutions in fluent French — presentations for the university's communications committee, shared approval of every asset and joint organic content, with UTM-tagged links so each institution could attribute its own leads.</li>
               </ul></div>
           </div>
           <div class="case-media">
             <ol class="timeline">
-              <li><b>22 Jul</b>Alliance announced · member page live</li>
-              <li><b>23 Jul</b>Institutional news on the group's website</li>
-              <li><b>28 Jul</b>Programme announced on IG · FB · LinkedIn</li>
-              <li><b>30 Jul – 5 Aug</b>Paid carousel campaign</li>
-              <li><b>7 Aug</b>Programme landing · brochure · CRM templates</li>
-              <li><b>Sep</b>Programme creatives · database email waves</li>
-              <li><b>Nov</b>Programme start</li>
+              <li><b>Phase 1</b>Partnership announced · member page live</li>
+              <li><b>Phase 2</b>Institutional news on the group's website</li>
+              <li><b>Phase 3</b>Programme announced on IG · FB · LinkedIn</li>
+              <li><b>Phase 4</b>Paid carousel campaign</li>
+              <li><b>Phase 5</b>Programme landing · brochure · CRM templates</li>
+              <li><b>Phase 6</b>Programme creatives · database email waves</li>
+              <li><b>Phase 7</b>Programme start</li>
             </ol>
             <div class="case-media two">
               <img src="it-programme.jpg" alt="Intelligence Territoriale programme creative"/>
@@ -442,8 +452,8 @@
         <div class="case-results">
           <div><span class="result-num">3</span><span class="result-label">Institutions aligned on one launch plan</span></div>
           <div><span class="result-num">3</span><span class="result-label">Channels activated: web, social (organic + paid), CRM</span></div>
-          <div><span class="result-num">~4 months</span><span class="result-label">From signed alliance to programme start</span></div>
-          <div><span class="result-num">100%</span><span class="result-label">Of assets produced in French</span></div>
+          <div><span class="result-num">~4 months</span><span class="result-label">From partnership announcement to programme start</span></div>
+          <div><span class="result-num">100%</span><span class="result-label">Of assets created in French for the Ivorian audience</span></div>
         </div>
       </article>
 
@@ -452,27 +462,28 @@
         <div class="case-head">
           <div class="case-number">04</div>
           <div>
-            <div class="case-tag">Lifecycle &amp; CRM · Higher education</div>
-            <div class="case-role">Role: Flow design, copy and implementation with Sales</div>
-            <h3 class="case-title">Lifecycle flows to convert, re-engage and retain leads and graduates</h3>
+            <div class="case-tag">Lifecycle &amp; CRM · Testimonials · Higher education</div>
+            <div class="case-role">Role: Strategy design, implementation and analysis</div>
+            <h3 class="case-title">Designing a testimonial and alumni strategy from scratch</h3>
           </div>
         </div>
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>Turning paid-media volume into enrolments needed structured follow-up at every stage: nurturing new leads, recovering those sales could not reach, re-engaging graduates and building local social proof.</p></div>
-            <div class="case-block"><h4>Three flows</h4>
+              <p>Turning paid-media volume into enrolments needed structured follow-up at every stage: nurturing new leads, recovering those sales could not reach, re-engaging graduates and building local social proof. There was no solid structure in place for lead follow-up or for collecting alumni testimonials.</p></div>
+            <div class="case-block"><h4>Testimonials system</h4>
+              <p>A repeatable process designed from the ground up: a tracking sheet fed from the CRM, an email flow triggered three to four weeks after each intake starts, a short interview guide and video specifications. Each testimonial feeds a <strong>multichannel strategy</strong> in five formats:</p>
+              <div class="pill-row" style="margin-top:.6rem"><span class="pill">Reel 30–45 s</span><span class="pill">LinkedIn native video</span><span class="pill">Quote card</span><span class="pill">Landing quote with photo</span><span class="pill">Email pull-quote</span></div></div>
+          </div>
+          <div>
+            <div class="case-block"><h4>Satisfaction surveys</h4>
+              <p>Design, analysis and follow-up of satisfaction surveys to assess programme quality from an emotional angle as well as a data-driven one. Combining both perspectives shows where the real drivers of satisfaction are, and which stories are worth turning into testimonials.</p></div>
+            <div class="case-block"><h4>Lifecycle flows that support it</h4>
               <ul>
                 <li><strong>Stage-based lead nurturing (Dynamics 365):</strong> email templates by pipeline stage, handed from Marketing to Sales for Africa and LATAM, in French and Spanish.</li>
                 <li><strong>Reactivation of unreachable leads:</strong> follow-up emails and WhatsApp surveys to recover contacts sales could not reach.</li>
                 <li><strong>Graduate cross-sell journey:</strong> a three-phase route offering past students a follow-on programme — landing page, advisor briefing, email sequence and call campaign.</li>
               </ul></div>
-          </div>
-          <div>
-            <div class="case-block"><h4>Testimonials system</h4>
-              <p>A repeatable process to collect alumni and faculty testimonials: a tracking sheet fed from the CRM, an email flow triggered three to four weeks after each intake starts, a short interview guide and video specifications.</p>
-              <p style="margin-top:.6rem">Each testimonial is repurposed into five formats:</p>
-              <div class="pill-row"><span class="pill">Reel 30–45 s</span><span class="pill">LinkedIn native video</span><span class="pill">Quote card</span><span class="pill">Landing quote with photo</span><span class="pill">Email pull-quote</span></div></div>
           </div>
         </div>
         <div class="flow" aria-label="Lifecycle flow">
@@ -480,13 +491,8 @@
           <div class="st"><b>Nurture</b>Dynamics 365 emails by stage, FR · ES</div><span class="ar">→</span>
           <div class="st hl"><b>Unreachable?</b>Reactivation by email and WhatsApp survey</div><span class="ar">→</span>
           <div class="st"><b>Sales</b>Advisor call and enrolment</div><span class="ar">→</span>
-          <div class="st"><b>Graduate</b>Cross-sell to a follow-on programme</div><span class="ar">→</span>
+          <div class="st"><b>Graduate</b>Satisfaction survey and cross-sell</div><span class="ar">→</span>
           <div class="st hl"><b>Testimonial</b>Five formats that feed new leads</div>
-        </div>
-        <div class="case-results">
-          <div><span class="result-num">3</span><span class="result-label">Lifecycle flows: nurture, reactivate, cross-sell</span></div>
-          <div><span class="result-num">2</span><span class="result-label">Markets and languages (FR · ES)</span></div>
-          <div><span class="result-num">5</span><span class="result-label">Channel formats per testimonial</span></div>
         </div>
       </article>
 
@@ -516,11 +522,7 @@
                 <li><strong>Premium Reels strategy:</strong> 112K views on a single Reel, with 1,400 saves tracked as a deferred-booking signal.</li>
               </ul></div>
           </div>
-          <div class="fid-grid">
-            <img src="fidelia-room.jpg" alt="Le Fidélia dining room" class="tall"/>
-            <img src="fidelia-tiktok.jpg" alt="Le Fidélia TikTok campaign"/>
-            <img src="fidelia-content.jpg" alt="Le Fidélia Reels content"/>
-          </div>
+          <div class="fid-single"><img src="fidelia-room.jpg" alt="Le Fidélia"/></div>
         </div>
         <div class="case-results">
           <div><span class="result-num">15%→80%</span><span class="result-label">Online bookings in 4 months</span></div>
