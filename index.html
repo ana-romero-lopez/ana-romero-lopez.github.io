@@ -200,6 +200,10 @@
     .proj h4 { font-size: 1rem; color: var(--black); margin-bottom: .5rem; }
     .proj p { font-size: .84rem; color: var(--mid); line-height: 1.65; }
     @media (max-width: 760px) { .proj-grid { grid-template-columns: 1fr; } .case-media.three { grid-template-columns: 1fr 1fr; } }
+      .fid-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:280px 280px; gap:.8rem; }
+    .fid-grid img { width:100%; height:100%; object-fit:cover; border-radius:8px; border:1px solid var(--border); }
+    .fid-grid .tall { grid-row:1 / 3; }
+    @media (max-width:760px){ .fid-grid{ grid-template-rows:200px 200px; } }
   </style>
 </head>
 <body>
@@ -252,7 +256,7 @@
       <div class="about-grid">
         <div>
           <div class="about-text">
-            <p>I work in <strong>international growth for higher education</strong> at IBERONEX (Planeta Formación y Universidades), marketing executive programmes co-certified with European and local universities in <strong>francophone Africa and LATAM</strong>.</p>
+            <p>I work in <strong>international growth for higher education</strong> at IBERONEX (Grupo Planeta), marketing executive programmes co-certified with European and local universities in <strong>francophone Africa and LATAM</strong>.</p>
             <p>My work covers three areas: <strong>market analysis</strong> to decide where and how to compete, <strong>campaign and lifecycle execution</strong> in Spanish, French and English, and the <strong>data and automation systems</strong> that track the funnel from first lead to enrolment.</p>
             <p>Previously I was Social Media Manager &amp; Brand Strategist at Le Fidélia in Algiers, where online bookings grew from 15% to 80% of volume, and Paid Media Manager at Otomatico, where I built Python and LLM-based automation for B2B campaigns. I am completing the <strong>Global Master in Business Analytics and Data Strategy</strong> at EAE Business School.</p>
           </div>
@@ -265,10 +269,9 @@
         </div>
         <div class="about-facts">
           <div class="fact-item"><div class="fact-label">Based in</div><div class="fact-value">📍 Barcelona, Spain</div></div>
-          <div class="fact-item"><div class="fact-label">Looking for</div><div class="fact-value">International Growth, Regional Marketing &amp; Marketing Ops roles — startups &amp; scale-ups</div></div>
-          <div class="fact-item"><div class="fact-label">Markets</div><div class="fact-value">Francophone Africa · LATAM · North Africa · Spain</div></div>
+                    <div class="fact-item"><div class="fact-label">Markets</div><div class="fact-value">Francophone Africa · LATAM · North Africa · Spain</div></div>
           <div class="fact-item"><div class="fact-label">Languages</div><div class="fact-value">ES · CA · EN (C1) · FR (C1) · AR (B2)</div></div>
-          <div class="fact-item"><div class="fact-label">Studying</div><div class="fact-value">Global Master in Business Analytics and Data Strategy — EAE</div></div>
+          <div class="fact-item"><div class="fact-label">Studying</div><div class="fact-value">Global Master in Business Analytics and Data Strategy — EAE Business School</div></div>
           <div class="fact-item"><div class="fact-label">LinkedIn</div><div class="fact-value"><a href="https://www.linkedin.com/in/ana-romero-l%C3%B3pez-9795b0378" target="_blank" rel="noopener">linkedin.com/in/ana-romero-lópez-9795b0378</a></div></div>
           <div class="fact-item"><div class="fact-label">Full portfolio</div><div class="fact-value"><a href="Ana-Romero-Portfolio-2026.pdf" target="_blank">Download PDF →</a></div></div>
         </div>
@@ -281,7 +284,7 @@
     <div class="section-inner">
       <p class="section-label">Part 1 · Analysis</p>
       <h2 class="section-title">Market analysis &amp; funnel intelligence</h2>
-      <p class="section-intro">How the market behaves and how our own funnel performs: the two questions that come before any campaign. IBERONEX figures are shown as counts or process outputs to respect confidentiality.</p>
+      <p class="section-intro">How the market behaves and how our own funnel performs: the two questions that come before any campaign. Figures are shown as counts or process outputs to respect confidentiality.</p>
       <div class="section-divider"></div>
 
       <!-- CASE 01 -->
@@ -289,28 +292,26 @@
         <div class="case-head">
           <div class="case-number">01</div>
           <div>
-            <div class="case-tag">Competitive intelligence · Product committee · IBERONEX</div>
+            <div class="case-tag">Competitive intelligence · Product committee · Higher education</div>
             <div class="case-role">Role: Research design, fieldwork and analysis</div>
-            <h3 class="case-title">Mystery shopping of 37 competitors to shape the 2027 programme launch</h3>
+            <h3 class="case-title">Designing and running a mystery shopping study of 37 competitors</h3>
           </div>
         </div>
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>Before launching its 2027 programme portfolio, the product committee needed evidence on how francophone institutions active in Africa attract and convert prospects, and how IBERONEX compares.</p></div>
-            <div class="case-block"><h4>Method</h4>
+              <p>Before launching a new programme portfolio for 2027, the product committee needed first-hand evidence of how francophone institutions active in Africa attract, contact and convert prospects, and a consistent way to compare them.</p></div>
+            <div class="case-block"><h4>Research design</h4>
               <ul>
-                <li><strong>37 institutions</strong> across 7 programme areas: 31 from the committee's list and 6 identified through Google, ChatGPT, paid search and the press.</li>
-                <li><strong>One week of fieldwork</strong> with a standardised prospect profile across web forms, email and WhatsApp, using scripted objections (price, workload, accreditation) and a fixed follow-up protocol.</li>
-                <li><strong>A 0–100 scoring model</strong> in two halves: commercial (response time, quality, follow-up, omnichannel) and digital marketing (landing page, SEO and visibility in Google and ChatGPT, Meta Ads, social media, Google Maps).</li>
+                <li><strong>Sample:</strong> 37 institutions across 7 programme areas — 31 from the committee's shortlist and 6 added after searching as a prospect would, through Google, ChatGPT, paid search and the press.</li>
+                <li><strong>Standardised prospect profile:</strong> one fictional persona with a defined professional background and scripted objections (price, workload, accreditation), used identically with every institution.</li>
+                <li><strong>Contact protocol:</strong> information requested through each institution's own channels (web form, email or WhatsApp), with a scripted reminder and a common closing date so every institution had the same chance to respond.</li>
               </ul></div>
-            <div class="case-block"><h4>Key findings</h4>
+            <div class="case-block"><h4>Fieldwork and audit</h4>
               <ul>
-                <li><strong>Reactive sales processes:</strong> 13 of 37 institutions never replied and none made an outbound call.</li>
-                <li><strong>WhatsApp as the main channel:</strong> 47% of contacts happened there, and a second email recovered replies from 6 of 12 non-responsive institutions.</li>
-                <li><strong>A shared pattern among the top five:</strong> a time-limited incentive, a brochure sent on request and a complete landing page with a direct contact channel.</li>
-                <li><strong>A pricing gap:</strong> local certificates and European programmes sit at opposite ends of the price range, leaving the middle band largely uncovered.</li>
-                <li><strong>Low ad differentiation:</strong> only 10 of 37 run Meta ads, and few show price, testimonials or European accreditation.</li>
+                <li><strong>Contact log:</strong> every touchpoint recorded with date, channel and response time, and each conversation rated 1–5 for personalisation and information quality.</li>
+                <li><strong>Digital audit of each competitor:</strong> mobile PageSpeed and landing-page content, technical SEO checks, 11 geolocated Google searches, 5 ChatGPT prompts, Google Maps listings, active ads in the Meta Ad Library and organic social activity over the last 30 days.</li>
+                <li><strong>Creative analysis:</strong> 20 active ads reviewed for format, message, price, proof points and call to action.</li>
               </ul></div>
           </div>
           <div>
@@ -319,18 +320,19 @@
               <img src="mystery-funnel.jpg" alt="Contact funnel: 37 requests, 24 replies, 17 human contacts, 6 high-value answers"/>
               <p class="caption">From the 31-slide committee report (in Spanish): scoring model and contact funnel. Competitor names removed.</p>
             </div>
-            <div class="case-block" style="margin-top:1.2rem"><h4>Outcome</h4>
-              <p>Among the 36 institutions scored on digital marketing, IBERONEX ranked <strong>2nd</strong>. The report led to three recommendations for the committee: time-limited incentives, informative creatives (format, duration, start date, partner logo) and a faster mobile landing page featuring African alumni testimonials.</p></div>
-            <div class="case-block"><h4>Deliverables</h4>
-              <div class="pill-row"><span class="pill">Contact log (Excel)</span><span class="pill">Scoring model</span><span class="pill">31-slide committee report</span><span class="pill">Recommendations</span></div>
+            <div class="case-block" style="margin-top:1.2rem"><h4>Scoring model</h4>
+              <p>Each institution was scored 0–100 in two equally weighted blocks: <strong>commercial</strong> (quality of the conversation 35%, response speed 30%, follow-up 20%, omnichannel 15%) and <strong>digital marketing</strong> (landing page 30%, SEO and AI-search visibility 25%, Meta Ads 20%, social media 15%, Google Maps 10%).</p></div>
+            <div class="case-block"><h4>Analysis and output</h4>
+              <p>Results were analysed by area — sales process, pricing, landing pages, search visibility, ads, creatives and social — to identify the patterns shared by the best performers. The study closed with three prioritised recommendations on offer, creatives and landing pages for the committee.</p>
+              <div class="pill-row" style="margin-top:.6rem"><span class="pill">Contact log (Excel)</span><span class="pill">Scoring model</span><span class="pill">31-slide committee report</span><span class="pill">Recommendations</span></div>
               <p class="note-small">Competitor names, prices and contact details are omitted.</p></div>
           </div>
         </div>
         <div class="case-results">
           <div><span class="result-num">37</span><span class="result-label">Institutions analysed</span></div>
           <div><span class="result-num">7 days</span><span class="result-label">Of live fieldwork</span></div>
-          <div><span class="result-num">#2 / 36</span><span class="result-label">IBERONEX on digital marketing</span></div>
-          <div><span class="result-num">47%</span><span class="result-label">Of contacts via WhatsApp</span></div>
+          <div><span class="result-num">9</span><span class="result-label">Weighted scoring criteria</span></div>
+          <div><span class="result-num">3</span><span class="result-label">Contact channels: web form, email, WhatsApp</span></div>
         </div>
       </article>
 
@@ -339,7 +341,7 @@
         <div class="case-head">
           <div class="case-number">02</div>
           <div>
-            <div class="case-tag">Full-funnel analytics · Marketing ops · IBERONEX</div>
+            <div class="case-tag">Full-funnel analytics · Marketing ops · Higher education</div>
             <div class="case-role">Role: Designed and built it</div>
             <h3 class="case-title">A full-funnel dashboard connecting marketing, sales and CRM by programme, intake and country</h3>
           </div>
@@ -387,7 +389,7 @@
         <div class="case-head">
           <div class="case-number">03</div>
           <div>
-            <div class="case-tag">Go-to-market · Francophone Africa · IBERONEX</div>
+            <div class="case-tag">Go-to-market · Francophone Africa · Higher education</div>
             <div class="case-role">Role: Launch communications lead</div>
             <h3 class="case-title">Launching an executive programme in Côte d'Ivoire with two academic partners</h3>
           </div>
@@ -395,7 +397,7 @@
         <div class="case-body">
           <div>
             <div class="case-block"><h4>Challenge</h4>
-              <p>IBERONEX signed an alliance with Université Félix Houphouët-Boigny, Côte d'Ivoire's leading university, to co-certify a new programme with ESLSCA Business School: <em>Intelligence Territoriale</em>, 12 weeks, fully online, in French. The brand was new to the market, every asset needed approval from three institutions, and recruitment worked to a fixed start date.</p></div>
+              <p>The group signed an alliance with Université Félix Houphouët-Boigny, Côte d'Ivoire's leading university, to co-certify a new programme with ESLSCA Business School: <em>Intelligence Territoriale</em>, 12 weeks, fully online, in French. The brand was new to the market, every asset needed approval from three institutions, and recruitment worked to a fixed start date.</p></div>
             <div class="case-block"><h4>What I did</h4>
               <ul>
                 <li><strong>Launch plan</strong> aligned with the programme's institutional timeline, from the alliance announcement to the programme start.</li>
@@ -407,7 +409,7 @@
           <div class="case-media">
             <ol class="timeline">
               <li><b>22 Jul</b>Alliance announced · member page live</li>
-              <li><b>23 Jul</b>Institutional news on iberonex.com</li>
+              <li><b>23 Jul</b>Institutional news on the group's website</li>
               <li><b>28 Jul</b>Programme announced on IG · FB · LinkedIn</li>
               <li><b>30 Jul – 5 Aug</b>Paid carousel campaign</li>
               <li><b>7 Aug</b>Programme landing · brochure · CRM templates</li>
@@ -434,7 +436,7 @@
         <div class="case-head">
           <div class="case-number">04</div>
           <div>
-            <div class="case-tag">Lifecycle &amp; CRM · IBERONEX</div>
+            <div class="case-tag">Lifecycle &amp; CRM · Higher education</div>
             <div class="case-role">Role: Flow design, copy and implementation with Sales</div>
             <h3 class="case-title">Lifecycle flows to convert, re-engage and retain leads and graduates</h3>
           </div>
@@ -498,11 +500,10 @@
                 <li><strong>Premium Reels strategy:</strong> 112K views on a single Reel, with 1,400 saves tracked as a deferred-booking signal.</li>
               </ul></div>
           </div>
-          <div class="case-media three">
-            <img src="fidelia-room.jpg" alt="Le Fidélia dining room"/>
+          <div class="fid-grid">
+            <img src="fidelia-room.jpg" alt="Le Fidélia dining room" class="tall"/>
             <img src="fidelia-tiktok.jpg" alt="Le Fidélia TikTok campaign"/>
             <img src="fidelia-content.jpg" alt="Le Fidélia Reels content"/>
-            <p class="caption">Le Fidélia, Algiers: the venue, the TikTok campaign and the lifestyle-first Reels content.</p>
           </div>
         </div>
         <div class="case-results">
@@ -516,7 +517,7 @@
       <!-- GALLERY -->
       <div id="gallery" class="gallery-block">
         <h3 class="subhead">Selected creatives</h3>
-        <p class="section-intro">Published creatives for IBERONEX programmes with partner schools in francophone Africa and LATAM: one brand system adapted to each market, language and channel.</p>
+        <p class="section-intro">Published creatives for executive programmes with partner schools in francophone Africa and LATAM: one brand system adapted to each market, language and channel.</p>
         <div class="gallery">
           <figure><img src="it-cible.jpg" alt=""/><figcaption><b>Africa · Paid · FR</b>Intelligence Territoriale — audience-led creative</figcaption></figure>
           <figure><img src="latam-liderazgo.jpg" alt=""/><figcaption><b>LATAM · Paid · ES</b>Leadership &amp; Strategic Communication — last places</figcaption></figure>
@@ -548,8 +549,8 @@
         <div class="case-head">
           <div class="case-number">06</div>
           <div>
-            <div class="case-tag">Marketing automation · AI · Otomatico &amp; IBERONEX · Open source</div>
-            <div class="case-role">Role: Designed and built it at Otomatico, now also used at IBERONEX · Python, Meta Marketing API, Claude API</div>
+            <div class="case-tag">Marketing automation · AI · Open source</div>
+            <div class="case-role">Role: Designed and built it at Otomatico, now also used in my current role · Python, Meta Marketing API, Claude API</div>
             <h3 class="case-title">Meta Ads AI Monitor: daily campaign diagnosis with the Claude API</h3>
           </div>
         </div>
@@ -576,7 +577,7 @@
           <div><span class="result-num">Daily</span><span class="result-label">Automated report with actions per campaign</span></div>
           <div><span class="result-num">4</span><span class="result-label">Configurable alert thresholds</span></div>
           <div><span class="result-num">9</span><span class="result-label">Root-cause categories for the AI diagnosis</span></div>
-          <div><span class="result-num">2</span><span class="result-label">Companies using it: Otomatico, IBERONEX</span></div>
+          <div><span class="result-num">2</span><span class="result-label">Companies where it runs daily</span></div>
         </div>
       </article>
 
@@ -611,7 +612,7 @@
         <div class="exp-item">
           <div class="exp-date">May 2026 – Present<br/>Barcelona, Spain</div>
           <div>
-            <div class="exp-company">IBERONEX · Planeta Formación y Universidades</div>
+            <div class="exp-company">IBERONEX · Grupo Planeta</div>
             <div class="exp-role">Marketing &amp; Communications Specialist — Francophone Africa &amp; LATAM</div>
             <ul class="exp-bullets">
               <li><strong>Market launches:</strong> end-to-end launches of new programmes with academic partners — positioning, landing pages, email sequences and sales enablement (e.g. Intelligence Territoriale in Côte d'Ivoire).</li>
